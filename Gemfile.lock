@@ -122,6 +122,8 @@ GEM
     puma (2.16.0)
     rack (2.0.0.alpha)
       json
+    rack-attack (4.3.1)
+      rack
     rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -185,6 +187,7 @@ DEPENDENCIES
   omniauth (~> 1.3, >= 1.3.1)
   pg (~> 0.18)
   puma
+  rack-attack
   rack-cors
   rails (= 5.0.0.beta1.1)
   spring
