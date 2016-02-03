@@ -21,7 +21,7 @@ module Api::V1
       @bottle = Bottle.new(bottle_params)
 
       if @bottle.save
-        render json: @bottle, status: :created, location: @bottle
+        render json: @bottle, status: :created
       else
         render json: @bottle.errors, status: :unprocessable_entity
       end
@@ -49,7 +49,7 @@ module Api::V1
 
     # Only allow a trusted parameter "white list" through.
     def bottle_params
-      params.require(:bottle).permit(:sender_id, :content)
+      params.permit(:sender_id, :content)
     end
   end
 end
